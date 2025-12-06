@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  currency-converter:
+    build: .
+    container_name: currency-converter-app
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    environment:
+      - NGINX_HOST=localhost
+      - NGINX_PORT=80
+    volumes:
+      # Опционально: для разработки можно монтировать файлы
+      # - ./index.html:/usr/share/nginx/html/index.html
+      # - ./style.css:/usr/share/nginx/html/style.css
+      # - ./script.js:/usr/share/nginx/html/script.js
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

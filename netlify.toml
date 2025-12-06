@@ -1,0 +1,25 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+```
+
+---
+
+## Структура проекта должна быть такой:
+```
+currency-converter/
+├── index.html
+├── style.css
+├── script.js
+├── cclogo.webp
+├── Dockerfile
+├── docker-compose.yml
+├── nginx.conf
+├── .dockerignore
+├── README-DEPLOY.md
+├── vercel.json (опционально)
+└── netlify.toml (опционально)

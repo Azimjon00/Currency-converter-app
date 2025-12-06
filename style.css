@@ -1,0 +1,211 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  body {
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 375px;
+    background: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  }
+  
+  .header {
+    text-align: center;
+    padding: 32px 24px 24px;
+    background: #ffffff;
+  }
+  
+  .header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 8px;
+  }
+  
+  .header p {
+    font-size: 14px;
+    color: #666666;
+    font-weight: 400;
+  }
+  
+  .content {
+    padding: 0 24px 32px;
+  }
+  
+  .label {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+  
+  .currency-block {
+    background: #f5f5f5;
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  
+  .currency-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .flag {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+  }
+  
+  .currency-code {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    padding-right: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23666' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+  
+  .currency-code option {
+    background: #ffffff;
+    color: #000000;
+  }
+  
+  .amount-input {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
+    background: transparent;
+    border: none;
+    text-align: right;
+    width: 140px;
+    outline: none;
+  }
+  
+  .amount-input::-webkit-inner-spin-button,
+  .amount-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .swap-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  
+  .swap-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #0066ff;
+    border: none;
+    color: #ffffff;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .swap-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 102, 255, 0.4);
+  }
+  
+  .swap-btn:active {
+    transform: scale(0.95);
+  }
+  
+  .result-text {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
+    text-align: right;
+    min-width: 140px;
+  }
+  
+  .exchange-rate {
+    text-align: center;
+    padding-top: 16px;
+    border-top: 1px solid #e5e5e5;
+    margin-top: 8px;
+  }
+  
+  .exchange-rate-text {
+    font-size: 14px;
+    color: #000000;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+  }
+  
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f0f0f0;
+    border-top-color: #0066ff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .error {
+    background: #fee;
+    color: #c00;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 16px;
+    font-size: 14px;
+    text-align: center;
+  }

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Currency Converter</title>
+  <link rel="icon" type="image/webp" href="cclogo.webp">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Currency Converter</h1>
+      <p>Check live rates, set rate alerts, receive notifications and more.</p>
+    </div>
+    
+    <div id="loading" class="loading">
+      <div class="spinner"></div>
+    </div>
+    
+    <div id="app" class="content hidden">
+      <div class="label">Amount</div>
+      
+      <div class="currency-block">
+        <div class="currency-left">
+          <div class="flag" id="from-flag">🇺🇸</div>
+          <select class="currency-code" id="from-select">
+            <option value="USD">USD</option>
+            <option value="SGD">SGD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="JPY">JPY</option>
+            <option value="CNY">CNY</option>
+            <option value="KGS">KGS</option>
+            <option value="RUB">RUB</option>
+          </select>
+        </div>
+        <input type="number" class="amount-input" id="amount-input" value="1000" step="any" />
+      </div>
+      
+      <div class="swap-container">
+        <button class="swap-btn" id="swap-btn">⇅</button>
+      </div>
+      
+      <div class="currency-block">
+        <div class="currency-left">
+          <div class="flag" id="to-flag">🇸🇬</div>
+          <select class="currency-code" id="to-select">
+            <option value="USD">USD</option>
+            <option value="SGD">SGD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="JPY">JPY</option>
+            <option value="CNY">CNY</option>
+            <option value="KGS">KGS</option>
+            <option value="RUB">RUB</option>
+          </select>
+        </div>
+        <div class="result-text" id="result">1356.74</div>
+      </div>
+      
+      <div class="exchange-rate">
+        <div class="exchange-rate-text" id="rate-text">1 USD = 1.38 SGD</div>
+      </div>
+      
+      <div id="error" class="error hidden"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
